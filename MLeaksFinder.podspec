@@ -25,10 +25,10 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Zeposhe" => "zeposhe@163.com" }
-  s.source           = { :git => "https://github.com/Zepo/MLeaksFinder.git", :tag => s.version }
+  s.source           = { :git => "git@github.com:bupojung/MLeaksFinder.git", :tag => s.version }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'MLeaksFinder/**/*'
   
@@ -42,10 +42,6 @@ Pod::Spec.new do |s|
   s.dependency 'RxSwift'
   s.pod_target_xcconfig = {
       "OTHER_SWIFT_FLAGS[config=Debug]" => "$(inherited) -D TRACE_RESOURCES"
-  }
-
-  s.pod_target_xcconfig = {
-      'OTHER_SWIFT_FLAGS[config=Debug]' => '$(inherited) -D TRACE_RESOURCES'
   }
 
 end
