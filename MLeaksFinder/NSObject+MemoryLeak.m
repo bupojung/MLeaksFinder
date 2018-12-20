@@ -15,6 +15,7 @@
 #import "MLeaksFinder.h"
 #import <objc/runtime.h>
 #import <UIKit/UIKit.h>
+#import <MLeaksFinder/MLeaksFinder-Swift.h>
 
 #if _INTERNAL_MLF_RC_ENABLED
 #import <FBRetainCycleDetector/FBRetainCycleDetector.h>
@@ -44,6 +45,14 @@ const void *const kLatestSenderKey = &kLatestSenderKey;
     return YES;
 }
 
+//+ (BOOL)willCheckForRxResources {
+//    NSString *className = NSStringFromClass([self class]);
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [NSObject assetResourceNotDealloc:className];
+//    });
+//    return YES;
+//}
+
 - (void)assertNotDealloc {
     if ([MLeakedObjectProxy isAnyObjectLeakedAtPtrs:[self parentPtrs]]) {
         return;
@@ -53,6 +62,18 @@ const void *const kLatestSenderKey = &kLatestSenderKey;
     NSString *className = NSStringFromClass([self class]);
     NSLog(@"Possibly Memory Leak.\nIn case that %@ should not be dealloced, override -willDealloc in %@ by returning NO.\nView-ViewController stack: %@", className, className, [self viewStack]);
 }
+    
+//+ (void)assetResourceNotDealloc:(NSObject *)className {
+//    extern const void *const kCurrentResourceCountKey;
+//    NSInteger preTotal = [RxSwiftResources getWithResouceCountOf:className];
+//    if (preTotal == -1) {
+//        return;
+//    }
+//    if ([RxSwiftResources total] > preTotal) {
+//        NSLog(@"Possibly Memory Leak.\n %@ Cause RxSwift Resource increase.\n preTotal:%ld, curTotal:%ld",
+//              className, (long)preTotal, [RxSwiftResources total]);
+//    }
+//}
 
 - (void)willReleaseObject:(id)object relationship:(NSString *)relationship {
     if ([relationship hasPrefix:@"self"]) {

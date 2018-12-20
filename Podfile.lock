@@ -1,12 +1,20 @@
 PODS:
   - FBRetainCycleDetector (0.1.2)
+  - RxSwift (4.3.1)
 
 DEPENDENCIES:
   - FBRetainCycleDetector
+  - RxSwift (= 4.3.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FBRetainCycleDetector
+    - RxSwift
 
 SPEC CHECKSUMS:
   FBRetainCycleDetector: 45462f9ed1af0cd77224a4cc4e6dacaca47371b4
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
 
-PODFILE CHECKSUM: 38741d1572d2c8740a441bc6562c61fa2ce1ef2e
+PODFILE CHECKSUM: 9324eecb1ef66fb857a6429b0eac595c1dc3bae7
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.5.3

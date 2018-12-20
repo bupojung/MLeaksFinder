@@ -39,4 +39,13 @@ Pod::Spec.new do |s|
   s.public_header_files = 'MLeaksFinder/MLeaksFinder.h', 'MLeaksFinder/NSObject+MemoryLeak.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'FBRetainCycleDetector'
+  s.dependency 'RxSwift'
+  s.pod_target_xcconfig = {
+      "OTHER_SWIFT_FLAGS[config=Debug]" => "$(inherited) -D TRACE_RESOURCES"
+  }
+
+  s.pod_target_xcconfig = {
+      'OTHER_SWIFT_FLAGS[config=Debug]' => '$(inherited) -D TRACE_RESOURCES'
+  }
+
 end

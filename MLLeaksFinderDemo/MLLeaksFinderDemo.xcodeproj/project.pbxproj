@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B484D50AC890C68A716BDA01 /* Pods_MLLeaksFinderDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AF21AD855D9693DBFEE37F /* Pods_MLLeaksFinderDemo.framework */; };
+		EF3119AA21CA574D00EA378C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3119A921CA574D00EA378C /* AppDelegate.swift */; };
+		EF3119AC21CA574D00EA378C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3119AB21CA574D00EA378C /* MasterViewController.swift */; };
+		EF3119AE21CA574D00EA378C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3119AD21CA574D00EA378C /* DetailViewController.swift */; };
+		EF3119B121CA574D00EA378C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3119AF21CA574D00EA378C /* Main.storyboard */; };
+		EF3119B321CA574F00EA378C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3119B221CA574F00EA378C /* Assets.xcassets */; };
+		EF3119B621CA574F00EA378C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3119B421CA574F00EA378C /* LaunchScreen.storyboard */; };
+		EF3119C121CA574F00EA378C /* MLLeaksFinderDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3119C021CA574F00EA378C /* MLLeaksFinderDemoTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF3119BD21CA574F00EA378C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF31199E21CA574D00EA378C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF3119A521CA574D00EA378C;
+			remoteInfo = MLLeaksFinderDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21DF315B1BED839DB200CDEE /* Pods-MLLeaksFinderDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLLeaksFinderDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLLeaksFinderDemo/Pods-MLLeaksFinderDemo.release.xcconfig"; sourceTree = "<group>"; };
+		30AF21AD855D9693DBFEE37F /* Pods_MLLeaksFinderDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLLeaksFinderDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31CAA936DA625F5D4E02E259 /* Pods-MLLeaksFinderDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLLeaksFinderDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLLeaksFinderDemo/Pods-MLLeaksFinderDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		EF3119A621CA574D00EA378C /* MLLeaksFinderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLLeaksFinderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3119A921CA574D00EA378C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF3119AB21CA574D00EA378C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		EF3119AD21CA574D00EA378C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EF3119B021CA574D00EA378C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF3119B221CA574F00EA378C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF3119B521CA574F00EA378C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF3119B721CA574F00EA378C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3119BC21CA574F00EA378C /* MLLeaksFinderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLLeaksFinderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3119C021CA574F00EA378C /* MLLeaksFinderDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLLeaksFinderDemoTests.swift; sourceTree = "<group>"; };
+		EF3119C221CA574F00EA378C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF3119A321CA574D00EA378C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B484D50AC890C68A716BDA01 /* Pods_MLLeaksFinderDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3119B921CA574F00EA378C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2967746CD2C8B9B5DDBEA2A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30AF21AD855D9693DBFEE37F /* Pods_MLLeaksFinderDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EA5C9EF0D3302CCC59CD16B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31CAA936DA625F5D4E02E259 /* Pods-MLLeaksFinderDemo.debug.xcconfig */,
+				21DF315B1BED839DB200CDEE /* Pods-MLLeaksFinderDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF31199D21CA574D00EA378C = {
+			isa = PBXGroup;
+			children = (
+				EF3119A821CA574D00EA378C /* MLLeaksFinderDemo */,
+				EF3119BF21CA574F00EA378C /* MLLeaksFinderDemoTests */,
+				EF3119A721CA574D00EA378C /* Products */,
+				3EA5C9EF0D3302CCC59CD16B /* Pods */,
+				2967746CD2C8B9B5DDBEA2A5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF3119A721CA574D00EA378C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF3119A621CA574D00EA378C /* MLLeaksFinderDemo.app */,
+				EF3119BC21CA574F00EA378C /* MLLeaksFinderDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF3119A821CA574D00EA378C /* MLLeaksFinderDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EF3119A921CA574D00EA378C /* AppDelegate.swift */,
+				EF3119AB21CA574D00EA378C /* MasterViewController.swift */,
+				EF3119AD21CA574D00EA378C /* DetailViewController.swift */,
+				EF3119AF21CA574D00EA378C /* Main.storyboard */,
+				EF3119B221CA574F00EA378C /* Assets.xcassets */,
+				EF3119B421CA574F00EA378C /* LaunchScreen.storyboard */,
+				EF3119B721CA574F00EA378C /* Info.plist */,
+			);
+			path = MLLeaksFinderDemo;
+			sourceTree = "<group>";
+		};
+		EF3119BF21CA574F00EA378C /* MLLeaksFinderDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF3119C021CA574F00EA378C /* MLLeaksFinderDemoTests.swift */,
+				EF3119C221CA574F00EA378C /* Info.plist */,
+			);
+			path = MLLeaksFinderDemoTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF3119A521CA574D00EA378C /* MLLeaksFinderDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF3119C521CA574F00EA378C /* Build configuration list for PBXNativeTarget "MLLeaksFinderDemo" */;
+			buildPhases = (
+				582E6C40C7247DA93A78B4B1 /* [CP] Check Pods Manifest.lock */,
+				EF3119A221CA574D00EA378C /* Sources */,
+				EF3119A321CA574D00EA378C /* Frameworks */,
+				EF3119A421CA574D00EA378C /* Resources */,
+				B5BD3B629FBB9AF8EB47A247 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MLLeaksFinderDemo;
+			productName = MLLeaksFinderDemo;
+			productReference = EF3119A621CA574D00EA378C /* MLLeaksFinderDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF3119BB21CA574F00EA378C /* MLLeaksFinderDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF3119C821CA574F00EA378C /* Build configuration list for PBXNativeTarget "MLLeaksFinderDemoTests" */;
+			buildPhases = (
+				EF3119B821CA574F00EA378C /* Sources */,
+				EF3119B921CA574F00EA378C /* Frameworks */,
+				EF3119BA21CA574F00EA378C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF3119BE21CA574F00EA378C /* PBXTargetDependency */,
+			);
+			name = MLLeaksFinderDemoTests;
+			productName = MLLeaksFinderDemoTests;
+			productReference = EF3119BC21CA574F00EA378C /* MLLeaksFinderDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF31199E21CA574D00EA378C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = bytedance;
+				TargetAttributes = {
+					EF3119A521CA574D00EA378C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					EF3119BB21CA574F00EA378C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = EF3119A521CA574D00EA378C;
+					};
+				};
+			};
+			buildConfigurationList = EF3119A121CA574D00EA378C /* Build configuration list for PBXProject "MLLeaksFinderDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF31199D21CA574D00EA378C;
+			productRefGroup = EF3119A721CA574D00EA378C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF3119A521CA574D00EA378C /* MLLeaksFinderDemo */,
+				EF3119BB21CA574F00EA378C /* MLLeaksFinderDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF3119A421CA574D00EA378C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3119B621CA574F00EA378C /* LaunchScreen.storyboard in Resources */,
+				EF3119B321CA574F00EA378C /* Assets.xcassets in Resources */,
+				EF3119B121CA574D00EA378C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3119BA21CA574F00EA378C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		582E6C40C7247DA93A78B4B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MLLeaksFinderDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5BD3B629FBB9AF8EB47A247 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MLLeaksFinderDemo/Pods-MLLeaksFinderDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLLeaksFinderDemo/Pods-MLLeaksFinderDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF3119A221CA574D00EA378C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3119AE21CA574D00EA378C /* DetailViewController.swift in Sources */,
+				EF3119AC21CA574D00EA378C /* MasterViewController.swift in Sources */,
+				EF3119AA21CA574D00EA378C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3119B821CA574F00EA378C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3119C121CA574F00EA378C /* MLLeaksFinderDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF3119BE21CA574F00EA378C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF3119A521CA574D00EA378C /* MLLeaksFinderDemo */;
+			targetProxy = EF3119BD21CA574F00EA378C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF3119AF21CA574D00EA378C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF3119B021CA574D00EA378C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF3119B421CA574F00EA378C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF3119B521CA574F00EA378C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF3119C321CA574F00EA378C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF3119C421CA574F00EA378C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF3119C621CA574F00EA378C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31CAA936DA625F5D4E02E259 /* Pods-MLLeaksFinderDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RXJZ4J95UK;
+				INFOPLIST_FILE = MLLeaksFinderDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ee.bytedance.MLLeaksFinderDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF3119C721CA574F00EA378C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21DF315B1BED839DB200CDEE /* Pods-MLLeaksFinderDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RXJZ4J95UK;
+				INFOPLIST_FILE = MLLeaksFinderDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ee.bytedance.MLLeaksFinderDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF3119C921CA574F00EA378C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RXJZ4J95UK;
+				INFOPLIST_FILE = MLLeaksFinderDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ee.bytedance.MLLeaksFinderDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MLLeaksFinderDemo.app/MLLeaksFinderDemo";
+			};
+			name = Debug;
+		};
+		EF3119CA21CA574F00EA378C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RXJZ4J95UK;
+				INFOPLIST_FILE = MLLeaksFinderDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ee.bytedance.MLLeaksFinderDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MLLeaksFinderDemo.app/MLLeaksFinderDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF3119A121CA574D00EA378C /* Build configuration list for PBXProject "MLLeaksFinderDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3119C321CA574F00EA378C /* Debug */,
+				EF3119C421CA574F00EA378C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF3119C521CA574F00EA378C /* Build configuration list for PBXNativeTarget "MLLeaksFinderDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3119C621CA574F00EA378C /* Debug */,
+				EF3119C721CA574F00EA378C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF3119C821CA574F00EA378C /* Build configuration list for PBXNativeTarget "MLLeaksFinderDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3119C921CA574F00EA378C /* Debug */,
+				EF3119CA21CA574F00EA378C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF31199E21CA574D00EA378C /* Project object */;
+}

@@ -13,22 +13,36 @@
 #import "UIViewController+MemoryLeak.h"
 #import "NSObject+MemoryLeak.h"
 #import <objc/runtime.h>
+#import <MLeaksFinder/MLeaksFinder-Swift.h>
 
 #if _INTERNAL_MLF_ENABLED
 
 const void *const kHasBeenPoppedKey = &kHasBeenPoppedKey;
+const void *const kCurrentResourceCountKey = &kCurrentResourceCountKey;
 
 @implementation UIViewController (MemoryLeak)
 
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        [self swizzleSEL:@selector(viewDidLoad) withSEL:@selector(swizzled_viewDidLoad)];
         [self swizzleSEL:@selector(viewDidDisappear:) withSEL:@selector(swizzled_viewDidDisappear:)];
         [self swizzleSEL:@selector(viewWillAppear:) withSEL:@selector(swizzled_viewWillAppear:)];
         [self swizzleSEL:@selector(dismissViewControllerAnimated:completion:) withSEL:@selector(swizzled_dismissViewControllerAnimated:completion:)];
     });
 }
-
+    
+//#if TRACE_RESOURCES
+- (void)swizzled_viewDidLoad {
+    NSInteger count = [RxSwiftResources total];
+    [RxSwiftResources setWithResouceCount:count object:self];
+    [self swizzled_viewDidLoad];
+}
+//- (void)swizzled_dealloc {
+//    [self swizzled_dealloc];
+//    [[self class] willCheckForRxResources];
+//}
+//#endif
 - (void)swizzled_viewDidDisappear:(BOOL)animated {
     [self swizzled_viewDidDisappear:animated];
     
@@ -60,7 +74,8 @@ const void *const kHasBeenPoppedKey = &kHasBeenPoppedKey;
     if (![super willDealloc]) {
         return NO;
     }
-    
+    __weak id weakSelf = self;
+    [RxSwiftResources assetResourceNotDeallocWithObject:weakSelf];
     [self willReleaseChildren:self.childViewControllers];
     [self willReleaseChild:self.presentedViewController];
     
