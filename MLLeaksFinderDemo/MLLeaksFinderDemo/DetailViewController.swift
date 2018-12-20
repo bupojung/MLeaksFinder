@@ -33,13 +33,15 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        configureView()
-        let ob = Observable<Int>.interval(1.0, scheduler: MainScheduler.instance)
-        ob.subscribe()
-        
+        configureView()        
         
     }
 
+    @IBAction func gotoAnotherVC(_ sender: Any) {
+        let vc = LeakViewController()
+        vc.title = "LeakView"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     var detailItem: NSDate? {
         didSet {
             // Update the view.

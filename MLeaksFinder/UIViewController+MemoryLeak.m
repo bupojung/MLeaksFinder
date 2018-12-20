@@ -31,17 +31,12 @@ const void *const kCurrentResourceCountKey = &kCurrentResourceCountKey;
         [self swizzleSEL:@selector(dismissViewControllerAnimated:completion:) withSEL:@selector(swizzled_dismissViewControllerAnimated:completion:)];
     });
 }
-    
+
 //#if TRACE_RESOURCES
 - (void)swizzled_viewDidLoad {
-    NSInteger count = [RxSwiftResources total];
-    [RxSwiftResources setWithResouceCount:count object:self];
+    [[RxSwiftResources shared] snapshotWithObject:self];
     [self swizzled_viewDidLoad];
 }
-//- (void)swizzled_dealloc {
-//    [self swizzled_dealloc];
-//    [[self class] willCheckForRxResources];
-//}
 //#endif
 - (void)swizzled_viewDidDisappear:(BOOL)animated {
     [self swizzled_viewDidDisappear:animated];
@@ -75,7 +70,7 @@ const void *const kCurrentResourceCountKey = &kCurrentResourceCountKey;
         return NO;
     }
     __weak id weakSelf = self;
-    [RxSwiftResources assetResourceNotDeallocWithObject:weakSelf];
+    [[RxSwiftResources shared] assetResourceNotDeallocWithObject:weakSelf];
     [self willReleaseChildren:self.childViewControllers];
     [self willReleaseChild:self.presentedViewController];
     

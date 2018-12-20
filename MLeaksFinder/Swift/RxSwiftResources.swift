@@ -12,29 +12,40 @@ import RxSwift
 
 @objc
 public class RxSwiftResources: NSObject {
-    @objc static var resourceMap = [String: Int]()
-    private static func composeKey(of object: AnyObject) -> String {
+    @objc public static let shared = RxSwiftResources()
+    @objc private var resourceMap = [String: Int]()
+    @objc private var lastKey = ""
+    private func composeKey(of object: AnyObject) -> String {
         return NSStringFromClass(type(of: object)) + String(format: "[%x]", object.hash ?? 0)
     }
-    @objc public static func total() -> Int {
-        return Int(Resources.total)
-    }
-    @objc public static func set(resouceCount: Int, object: AnyObject) {
-        let key = composeKey(of: object)
-        resourceMap[key] = resouceCount
-    }
-    @objc public static func get(resouceCountOf object: AnyObject) -> Int {
-        let key = composeKey(of: object)
-        return resourceMap[key] ?? -1
+    
+    @objc private func checkResource(key: String) {
+        print("Current Resources Total:\(total())")
+        if let pre = resourceMap[key], pre < total() {
+            print("Possibly Memory Leak.\n \(key) Cause RxSwift Resource increase.\n preTotal:\(pre), curTotal:\(total())")
+        }
+        resourceMap.removeValue(forKey: key)
+        
     }
     
-    @objc public static func assetResourceNotDealloc(object: AnyObject) {
-        let key = composeKey(of: object)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            if let pre = resourceMap[key], pre < total() {
-                resourceMap.removeValue(forKey: key)
-                print("Possibly Memory Leak.\n \(key) Cause RxSwift Resource increase.\n preTotal:\(pre), curTotal:\(total())")
-            }
-        }
+    @objc private func total() -> Int {
+        return Int(Resources.total)
     }
+    @objc public func snapshot(object: AnyObject) {
+        let key = composeKey(of: object)
+        resourceMap.removeValue(forKey: lastKey)
+        NSObject.cancelPreviousPerformRequests(withTarget: self)
+        resourceMap[key] = total()
+        print("resourceMap:\(resourceMap.count)")
+    }
+    
+    @objc public func assetResourceNotDealloc(object: AnyObject) {
+        NSObject.cancelPreviousPerformRequests(withTarget: self)
+        let key = composeKey(of: object)
+        lastKey = key
+        self.perform(#selector(checkResource(key:)), with: key, afterDelay: 2.0)
+        
+    }
+    
+    
 }

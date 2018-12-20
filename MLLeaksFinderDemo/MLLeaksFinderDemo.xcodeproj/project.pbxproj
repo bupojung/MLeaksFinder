@@ -15,6 +15,7 @@
 		EF3119B321CA574F00EA378C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3119B221CA574F00EA378C /* Assets.xcassets */; };
 		EF3119B621CA574F00EA378C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3119B421CA574F00EA378C /* LaunchScreen.storyboard */; };
 		EF3119C121CA574F00EA378C /* MLLeaksFinderDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3119C021CA574F00EA378C /* MLLeaksFinderDemoTests.swift */; };
+		EFA5894321CBA20200776D9A /* LeakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5894221CBA20200776D9A /* LeakViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		EF3119BC21CA574F00EA378C /* MLLeaksFinderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLLeaksFinderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3119C021CA574F00EA378C /* MLLeaksFinderDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLLeaksFinderDemoTests.swift; sourceTree = "<group>"; };
 		EF3119C221CA574F00EA378C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFA5894221CBA20200776D9A /* LeakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				EF3119B221CA574F00EA378C /* Assets.xcassets */,
 				EF3119B421CA574F00EA378C /* LaunchScreen.storyboard */,
 				EF3119B721CA574F00EA378C /* Info.plist */,
+				EFA5894221CBA20200776D9A /* LeakViewController.swift */,
 			);
 			path = MLLeaksFinderDemo;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				EF3119AE21CA574D00EA378C /* DetailViewController.swift in Sources */,
 				EF3119AC21CA574D00EA378C /* MasterViewController.swift in Sources */,
 				EF3119AA21CA574D00EA378C /* AppDelegate.swift in Sources */,
+				EFA5894321CBA20200776D9A /* LeakViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
