@@ -25,7 +25,8 @@ const void *const kCurrentResourceCountKey = &kCurrentResourceCountKey;
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self swizzleSEL:@selector(viewDidLoad) withSEL:@selector(swizzled_viewDidLoad)];
+//        [self swizzleSEL:@selector(viewDidLoad) withSEL:@selector(swizzled_viewDidLoad)];
+        [self swizzleSEL:@selector(loadView) withSEL:@selector(swizzled_loadView)];
         [self swizzleSEL:@selector(viewDidDisappear:) withSEL:@selector(swizzled_viewDidDisappear:)];
         [self swizzleSEL:@selector(viewWillAppear:) withSEL:@selector(swizzled_viewWillAppear:)];
         [self swizzleSEL:@selector(dismissViewControllerAnimated:completion:) withSEL:@selector(swizzled_dismissViewControllerAnimated:completion:)];
@@ -36,6 +37,11 @@ const void *const kCurrentResourceCountKey = &kCurrentResourceCountKey;
 - (void)swizzled_viewDidLoad {
     [[RxSwiftResources shared] snapshotWithObject:self];
     [self swizzled_viewDidLoad];
+}
+
+- (void)swizzled_loadView {
+    [[RxSwiftResources shared] snapshotWithObject:self];
+    [self swizzled_loadView];
 }
 //#endif
 - (void)swizzled_viewDidDisappear:(BOOL)animated {
