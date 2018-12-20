@@ -43,5 +43,9 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = {
       "OTHER_SWIFT_FLAGS[config=Debug]" => "$(inherited) -D TRACE_RESOURCES"
   }
+  
+  s.subspec 'Swift' do |ss|
+      ss.source_files = 'MLeaksFinder/Swift/*'
+  end
 
 end
